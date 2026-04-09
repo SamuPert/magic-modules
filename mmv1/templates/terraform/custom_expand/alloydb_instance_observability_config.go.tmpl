@@ -59,7 +59,7 @@ func expandAlloydbInstanceObservabilityConfig(v interface{}, d tpgresource.Terra
 		transformed["trackActiveQueries"] = transformedTrackActiveQueries
 	}
 
-	transformedTrackClientAddress, err := expandAlloydbInstanceObservabilityConfigTrackClientAddress(original["track_active_queries"], d, config)
+	transformedTrackClientAddress, err := expandAlloydbInstanceObservabilityConfigTrackClientAddress(original["track_client_address"], d, config)
 	if err != nil {
 		return nil, err
 	} else if transformedTrackClientAddress != nil {
